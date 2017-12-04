@@ -44,6 +44,7 @@ void GateSetup(GateSet *Gate_Set,block key)
         tmp[0]=Flip(tmp[0]);
     Gate_Set->Delta=tmp[0];
 #endif
+    Gate_Set->GateCount=0;
 }
 void BatchGateGeneration(BatchGate *dst, uint64_t n, GateSet *Gate_Set)
 {
