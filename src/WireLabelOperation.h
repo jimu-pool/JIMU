@@ -158,6 +158,7 @@ static inline block RMEnc(WireLabel l,block **RMTable)
     int i;
     for (i=1;i<32;i++)
         result=_mm_xor_si128(result,RMTable[i][tmp[i]]);
+    result=_mm_slli_epi64(result,1);
     return result;
 }
 
